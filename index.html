@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What to do?</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>What to do <span>today </span>?</h1>
+    <form>
+        <label>Select your interests:</label>
+        <div class="interest-area">
+            <div class="interest-options">
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="education">Education</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="recreational">Recreational</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="social">Social</div>
+            </div>
+            <div class="interest-options">
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="diy">DIY</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="charity">Charity</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="cooking">Cooking</div>
+            </div>
+            <div class="interest-options">
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="relaxation">Relaxation</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="music">Music</div>
+                <div class="checkbox-item"><input class="checkbox" type="checkbox" id="busywork">Busywork</div>
+            </div>
+        </div>
+        <label>Participants:</label>
+        <div id="participant-input">
+            <input type="range" id="participants" value=1 min="1" max="4" oninput="this.nextElementSibling.value = this.value">
+            <output>1</output>
+        </div>
+        <button id="search-btn" onclick="giveSuggestion()" type="button">🔎 Search</button>
+    </form>
+
+
+    <h2 id="suggested-activity"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
