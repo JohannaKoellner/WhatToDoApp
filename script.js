@@ -47,7 +47,7 @@ function giveSuggestion() {
 //async for of function
 async function fetchSuggestion(){
     for await (const element of checkedActivities) {
-        const url = `http://www.boredapi.com/api/activity?type=${element}&participants=${participants}`;
+        const url = `https://www.boredapi.com/api/activity?type=${element}&participants=${participants}`;
 
         //fetch the data
         let response = await fetch(url);
